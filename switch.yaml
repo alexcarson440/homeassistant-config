@@ -1,0 +1,19 @@
+### switch.yaml
+  - platform: flux
+    lights:
+     - light.living_room
+     - light.kitchen
+     - light.bathroom
+     - light.bedroom
+     - light.office
+     - light.hallway
+    name: Flux
+    start_time: '6:00'
+    stop_time: '23:00'
+    start_colortemp: 40000
+    sunset_colortemp: 3000
+    stop_colortemp: 1900
+    disable_brightness_adjust: True
+    mode: mired
+    #transition: 1800
+    #interval: 900

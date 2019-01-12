@@ -12,6 +12,8 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
+switch: !include switch.yaml
+
 # UI Components
 # introduction: # Show links to resources in log and frontend
 frontend:
