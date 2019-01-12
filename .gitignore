@@ -1,7 +1,14 @@
-.cloud
-deps
 *.log
 *.db
-secrets.yaml
+*.db-shm
+*.db-wal
+*.xml
+*.sqlite
+
+.cloud
 .storage
 .uuid
+deps
+
+secrets.yaml
+OZW_Log.txt

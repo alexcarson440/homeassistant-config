@@ -13,7 +13,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 # UI Components
-introduction: # Show links to resources in log and frontend
+# introduction: # Show links to resources in log and frontend
 frontend:
 map:
 logbook:
@@ -39,3 +39,7 @@ tts:
 
 sensor:
   - platform: yr
+
+zwave:
+  usb_path: /dev/zwaveusbstick
+  network_key: !secret zwave_network_key
