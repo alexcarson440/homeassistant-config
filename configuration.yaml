@@ -46,3 +46,10 @@ sensor:
 zwave:
   usb_path: /dev/zwaveusbstick
   network_key: !secret zwave_network_key
+
+binary_sensor:
+  - platform: hue
+device_tracker:
+  - platform: hue
+sensor:
+  - platform: hue
