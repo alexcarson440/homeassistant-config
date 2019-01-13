@@ -1,0 +1,13 @@
+### google_assistant.yaml
+  project_id: homeassistant-8de55
+  api_key: !secret google_assistant_api
+  expose_by_default: false
+  entity_config:
+    switch.flux:
+      name: Flux
+      expose: true
+    switch.bathroom_fan:
+      name: Bathroom Fan
+      expose: true
+      aliases:
+       - Fan

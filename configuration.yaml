@@ -13,6 +13,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 switch: !include switch.yaml
+google_assistant: !include google_assistant.yaml
 
 # UI Components
 # introduction: # Show links to resources in log and frontend
