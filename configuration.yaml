@@ -36,12 +36,13 @@ http:
 discovery:
 sun:
 
+weather: # Weather prediction
+  - platform: openweathermap
+    api_key: !secret openweather_api
+
 tts:
   - platform: google
     base_url: http://10.0.0.3:8123
-
-sensor:
-  - platform: yr
 
 zwave:
   usb_path: /dev/zwaveusbstick
