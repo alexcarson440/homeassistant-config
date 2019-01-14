@@ -1,1 +1,37 @@
-[]
+- id: startup
+  alias: Startup
+  trigger:
+  - platform: homeassistant
+    event: start
+  condition: []
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.flux
+  - service: google_assistant.request_sync
+    data:
+      agent_user_id: 458472e0a819444cb675d2fb098808a2
+
+- id: bathroom_switch_1_hold
+  alias: Bathroom Switch "ON" Hold
+  trigger:
+  - platform: state
+    entity_id: sensor.bathroom_switch
+    to: '1_hold'
+  condition: []
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.bathroom_fan
+
+- id: bathroom_switch_4_hold
+  alias: Bathroom Switch "OFF" Hold
+  trigger:
+  - platform: state
+    entity_id: sensor.bathroom_switch
+    to: '4_hold'
+  condition: []
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.bathroom_fan
