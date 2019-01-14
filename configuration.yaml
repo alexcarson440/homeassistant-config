@@ -17,14 +17,14 @@ google_assistant: !include google_assistant.yaml
 
 # UI Components
 # introduction: # Show links to resources in log and frontend
-frontend:
-map:
-logbook:
-history:
-config:
-conversation:
+frontend: # Enables the frontend
+map: # Enables a map showing the location of tracked devices
+logbook: # View all events in a logbook
+history: # Enables support for tracking state changes over time
+config: # Enables configuration UI
+conversation: # Allows you to issue voice commands from the frontend in enabled browsers
 
-updater:
+updater: # Checks for available updates
   include_used_components: true
 
 http:
@@ -33,14 +33,14 @@ http:
   trusted_proxies:
     - 127.0.0.1
 
-discovery:
-sun:
+discovery: # Discover some devices automatically
+sun: # Track the sun
 
 weather: # Weather prediction
   - platform: openweathermap
     api_key: !secret openweather_api
 
-tts:
+tts: # Text to speech
   - platform: google
     base_url: http://10.0.0.3:8123
 
