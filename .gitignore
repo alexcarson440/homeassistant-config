@@ -4,6 +4,8 @@
 *.db-wal
 *.xml
 *.sqlite
+*.pyc
+*.cookies
 
 .cloud
 .storage
@@ -12,3 +14,4 @@ deps
 
 secrets.yaml
 OZW_Log.txt
+known_devices.yaml

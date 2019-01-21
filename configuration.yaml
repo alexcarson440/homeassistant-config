@@ -13,6 +13,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 switch: !include switch.yaml
+device_tracker: !include device_tracker.yaml
 google_assistant: !include google_assistant.yaml
 
 # UI Components
@@ -49,8 +50,6 @@ zwave:
   network_key: !secret zwave_network_key
 
 binary_sensor:
-  - platform: hue
-device_tracker:
   - platform: hue
 sensor:
   - platform: hue
