@@ -1,2 +1,84 @@
+### customize.yaml
+
+# light Groups
+light.living_room:
+  friendly_name: All Living Room Lights
+  icon: mdi:floor-lamp
+light.dining_room:
+  hidden: true # no lights yet
+  friendly_name: All Kitchen Lights
+  icon: mdi:ceiling-light
+light.kitchen:
+  friendly_name: All Kitchen Lights
+  icon: mdi:ceiling-light
+light.bathroom:
+  friendly_name: All Bathroom Lights
+  icon: mdi:ceiling-light
+light.bedroom:
+  friendly_name: All Bedroom Lights
+  icon: mdi:lamp
+light.office:
+  friendly_name: All Office Lights
+  hidden: true # only one light
+  icon: mdi:floor-lamp
+light.hallway:
+  friendly_name: All hallway Lights
+  hidden: true # no lights yet # only one light
+  icon: mdi:ceiling-light
+
+# single lights
+light.living_room_lamp_b:
+  icon: mdi:floor-lamp
+light.living_room_lamp_g:
+  icon: mdi:floor-lamp
+light.living_room_lamp_p:
+  icon: mdi:floor-lamp
+light.living_room_lamp_r:
+  icon: mdi:floor-lamp
+light.living_room_lamp_w:
+  icon: mdi:floor-lamp
+light.kitchen_light_n:
+  icon: mdi:ceiling-light
+light.kitchen_light_s:
+  icon: mdi:ceiling-light
+light.bathroom_light_a:
+  icon: mdi:ceiling-light
+light.bathroom_light_b:
+  icon: mdi:ceiling-light
+light.bathroom_light_c:
+  icon: mdi:ceiling-light
+light.bathroom_light_d:
+  icon: mdi:ceiling-light
+light.bedroom_lamp:
+  icon: mdi:floor-lamp
+light.mads_lamp:
+  icon: mdi:lamp
+light.office_lamp:
+  icon: mdi:floor-lamp
+
+# google homes
+media_player.kitchen_display:
+  icon: mdi:google-assistant
+media_player.bathroom_mini:
+  icon: mdi:google-assistant
+media_player.bedroom_display:
+  icon: mdi:google-assistant
+media_player.office_mini:
+  icon: mdi:google-assistant
+
+# media players
+media_player.living_room_tv:
+  icon: mdi:television
+media_player.living_room_receiver:
+  icon: mdi:audio-video
+media_player.living_room_audio:
+  icon: mdi:speaker
+media_player.bedroom_tv:
+  icon: mdi:television
+
 light.bathroom_fan:
+  hidden: true
+media_player.living_room_receiver_zone_2:
+  hidden: true
+media_player.living_room_receiver_zone_3:
   hidden: true
