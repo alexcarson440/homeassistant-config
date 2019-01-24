@@ -13,6 +13,7 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 
 switch: !include switch.yaml
+media_player: !include media_player.yaml
 zone: !include zone.yaml
 device_tracker: !include device_tracker.yaml
 google_assistant: !include google_assistant.yaml

@@ -18,6 +18,7 @@
       - light.living_room_lamp_r
       - light.living_room_lamp_w
       - media_player.living_room_tv
+      - media_player.living_room_receiver
       - media_player.living_room_audio
       - sensor.living_room_and_kitchen_switch
   kitchen:
