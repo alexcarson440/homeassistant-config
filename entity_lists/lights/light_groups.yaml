@@ -1,0 +1,8 @@
+### entity_lists/lights/light_groups.yaml
+ - light.living_room
+ - light.dining_room
+ - light.kitchen
+ - light.bathroom
+ - light.bedroom
+ - light.office
+ - light.hallway
