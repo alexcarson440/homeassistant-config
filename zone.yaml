@@ -1,0 +1,24 @@
+### zone.yaml
+  - name: Home
+    latitude: !secret home_latitude
+    longitude: !secret home_longitude
+    radius: 25
+    icon: mdi:home
+
+  - name: Company One
+    latitude: 42.344522
+    longitude: -71.071719
+    radius: 50
+    icon: mdi:briefcase
+
+  - name: Malden Center
+    latitude: 42.426679
+    longitude: -71.074265
+    radius: 50
+    icon: mdi:train-variant
+
+  - name: OBERON
+    latitude: 42.370834
+    longitude: -71.114509
+    radius: 50
+    #icon: mdi:drama-masks
