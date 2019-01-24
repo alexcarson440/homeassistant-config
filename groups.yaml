@@ -1,0 +1,65 @@
+### groups.yaml
+# people
+  house_members:
+    name: House Members
+    entities:  !include entity_lists/people/house_members.yaml
+  guests:
+    name: Guests
+    entities: !include entity_lists/people/guests.yaml
+
+# rooms
+  living_room:
+    name: Living Room
+    entities:
+      - light.living_room
+      - light.living_room_lamp_b
+      - light.living_room_lamp_g
+      - light.living_room_lamp_p
+      - light.living_room_lamp_r
+      - light.living_room_lamp_w
+      - media_player.living_room_tv
+      - media_player.living_room_audio
+      - sensor.living_room_and_kitchen_switch
+  kitchen:
+    name: Kitchen
+    entities:
+      - light.kitchen
+      - light.kitchen_light_n
+      - light.kitchen_light_s
+      - media_player.kitchen_display
+  bathroom:
+    name: Bathroom
+    entities:
+      - light.bathroom
+      - light.bathroom_light_a
+      - light.bathroom_light_b
+      - light.bathroom_light_c
+      - light.bathroom_light_d
+      - switch.bathroom_fan
+      - sensor.bathroom_switch
+      - media_player.bathroom_mini
+  bedroom:
+    name: Bedrooom
+    entities:
+      - light.bedroom
+      - light.bedroom_lamp
+      - light.mads_lamp
+      - media_player.bedroom
+      - media_player.bedroom_tv
+      - media_player.bedroom_display
+      - sensor.bedroom_switch
+  office:
+    name: Office
+    entities:
+      - light.office
+      - light.office_lamp
+      - sensor.office_switch
+      - media_player.office_mini
+
+  dimmer_switch:
+    name: Hue Dimmer Switches
+    entities:
+      - sensor.living_room_and_kitchen_switch
+      - sensor.bathroom_switch
+      - sensor.bedroom_switch
+      - sensor.office_switch
