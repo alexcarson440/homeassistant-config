@@ -76,6 +76,9 @@ media_player.living_room_audio:
 media_player.bedroom_tv:
   icon: mdi:television
 
+switch.cd_player:
+  icon: mdi:disc-player
+
 light.bathroom_fan:
   hidden: true
 media_player.living_room_receiver_zone_2:

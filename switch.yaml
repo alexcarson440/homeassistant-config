@@ -18,6 +18,9 @@
     #transition: 1800
     #interval: 900
 
+  - platform: tplink
+    host: 10.0.0.20 #CD Player
+
 # Change bathroom fan from a light to a switch
   - platform: template
     switches:
