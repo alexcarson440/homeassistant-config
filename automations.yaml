@@ -35,3 +35,52 @@
   - service: switch.turn_off
     data:
       entity_id: switch.bathroom_fan
+
+- id: control_cd_player
+  alias: Control CD Player
+  trigger:
+  - platform: state
+    entity_id: switch.cd_player
+  - platform: state
+    entity_id: media_player.living_room_receiver
+  condition: []
+  action:
+  - data_template:
+      entity_id: >
+        {% if trigger.entity_id == 'media_player.living_room_receiver' %}
+          switch.cd_player
+        {% else %}
+          media_player.living_room_receiver
+        {% endif %}
+    service_template: >
+      {% if trigger.entity_id == 'media_player.living_room_receiver' %}
+        {% if trigger.to_state.attributes['source'] == 'CD' %}
+          switch.turn_on
+        {% elif trigger.from_state.attributes['source'] == 'CD' %}
+          switch.turn_off
+        {% else %}
+          script.noop
+        {% endif %}
+      {% else %}
+        {% if trigger.to_state.state == 'on' %}
+          media_player.turn_on
+        {% else %}
+          {% if is_state_attr('media_player.living_room_receiver','source', 'CD') %}
+            media_player.turn_off
+          {% else%}
+            script.noop
+          {% endif %}
+        {% endif %}
+      {% endif %}
+  - condition: and
+    conditions:
+      - condition: template
+        value_template: "{{ trigger.entity_id == 'switch.cd_player' }}"
+      - condition: template
+        value_template: "{{ trigger.to_state.state == 'on' }}"
+      - condition: template
+        value_template: "{{ state_attr('media_player.living_room_receiver','source') != 'CD' }}"
+  - service: media_player.select_source
+    data:
+      entity_id: media_player.living_room_receiver
+      source: 'CD'
