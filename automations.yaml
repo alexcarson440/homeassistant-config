@@ -10,7 +10,7 @@
       entity_id: switch.flux
   - service: google_assistant.request_sync
     data:
-      agent_user_id: 458472e0a819444cb675d2fb098808a2
+      agent_user_id: 0c1ba4ded74d492a9624e710ed536eac
 
 - id: bathroom_switch_1_hold
   alias: Bathroom Switch "ON" Hold
