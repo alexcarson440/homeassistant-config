@@ -11,3 +11,10 @@
       expose: true
       aliases:
        - Fan
+    media_player.living_room_receiver:
+      name: Living Room Receiver
+      expose: true
+      aliases:
+       - Receiver
+       - Stereo
+       - Onkyo
