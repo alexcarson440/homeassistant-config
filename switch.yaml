@@ -1,12 +1,6 @@
 ### switch.yaml
   - platform: flux
-    lights:
-     - light.living_room
-     - light.kitchen
-     - light.bathroom
-     - light.bedroom
-     - light.office
-     - light.hallway
+    lights: !include entity_lists/lights/lights.yaml
     name: Flux
     start_time: '6:00'
     stop_time: '23:00'
