@@ -3,7 +3,7 @@
   api_key: !secret google_assistant_api
   expose_by_default: false
   entity_config:
-    switch.flux:
+    switch.circadian_lighting:
       name: Flux
       expose: true
     switch.bathroom_fan:

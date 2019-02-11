@@ -1,16 +1,7 @@
 ### switch.yaml
-  - platform: flux
-    lights: !include entity_lists/lights/lights.yaml
-    name: Flux
-    start_time: '6:00'
-    stop_time: '23:00'
-    start_colortemp: 40000
-    sunset_colortemp: 3000
-    stop_colortemp: 1900
-    disable_brightness_adjust: True
-    mode: mired
-    #transition: 1800
-    #interval: 900
+  - platform: circadian_lighting
+    lights_ct: !include entity_lists/lights/lights.yaml
+    disable_brightness_adjust: true
 
   - platform: tplink
     host: 10.0.0.20 #CD Player
