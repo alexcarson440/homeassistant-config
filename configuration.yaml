@@ -12,10 +12,12 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
+binary_sensor: !include binary_sensor.yaml
+device_tracker: !include device_tracker.yaml
 switch: !include switch.yaml
 media_player: !include media_player.yaml
 zone: !include zone.yaml
-device_tracker: !include device_tracker.yaml
+
 google_assistant: !include google_assistant.yaml
 
 # UI Components
@@ -26,6 +28,7 @@ logbook: # View all events in a logbook
 history: # Enables support for tracking state changes over time
 config: # Enables configuration UI
 conversation: # Allows you to issue voice commands from the frontend in enabled browsers
+system_health: # Displays information on the system and its components
 
 updater: # Checks for available updates
   include_used_components: true
@@ -51,7 +54,6 @@ zwave:
   usb_path: /dev/zwaveusbstick
   network_key: !secret zwave_network_key
 
-binary_sensor: !include binary_sensor.yaml
 sensor:
   - platform: hue_custom
 
