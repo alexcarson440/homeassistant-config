@@ -52,9 +52,9 @@ zwave:
   network_key: !secret zwave_network_key
 
 binary_sensor:
-  - platform: hue
+  - platform: hue_custom
 sensor:
-  - platform: hue
+  - platform: hue_custom
 
 notify:
   - platform: pushbullet

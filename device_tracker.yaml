@@ -3,4 +3,4 @@
     username: yinyang1994.hass@gmail.com
     password: !secret google_maps_password
 
-  - platform: hue
+  - platform: hue_custom
