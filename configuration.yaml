@@ -51,8 +51,7 @@ zwave:
   usb_path: /dev/zwaveusbstick
   network_key: !secret zwave_network_key
 
-binary_sensor:
-  - platform: hue_custom
+binary_sensor: !include binary_sensor.yaml
 sensor:
   - platform: hue_custom
 
