@@ -33,6 +33,9 @@ conversation: # Allows you to issue voice commands from the frontend in enabled 
 system_health: # Displays information on the system and its components
 hassio: # Add the hassio tab
 
+lovelace: # Use lovelace UI
+  mode: yaml
+
 updater: # Checks for available updates
   include_used_components: true
 

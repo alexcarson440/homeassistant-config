@@ -1,0 +1,280 @@
+title: Home
+
+resources:
+  - type: js
+    url: /local/custom-lovelace/group-card/group-card.js
+
+views:
+  - title: Home
+    icon: 'mdi:home'
+    path: home
+    cards:
+      - type: glance
+        title: House Members
+        show_header_toggle: false
+        entities:
+          - entity: person.alex
+          - entity: person.mads
+      - type: glance
+        title: Lights
+        columns: 4
+        entities:
+          - entity: group.lights
+            name: All Lights
+            tap_action:
+              action: toggle
+          - entity: light.living_room
+            name: Living Room
+            tap_action:
+              action: toggle
+          - entity: light.dining_room
+            name: Dining Room
+            tap_action:
+              action: toggle
+          - entity: light.kitchen
+            name: Kitchen
+            tap_action:
+              action: toggle
+          - entity: light.bathroom
+            name: Bathroom
+            tap_action:
+              action: toggle
+          - entity: light.bedroom
+            name: Bedroom
+            tap_action:
+              action: toggle
+          - entity: light.office
+            name: Office
+            tap_action:
+              action: toggle
+          - entity: light.hallway
+            name: Hallway
+            tap_action:
+              action: toggle
+      - type: glance
+        title: Switch
+        entities:
+          - entity: switch.circadian_lighting_circadian_lighting
+            tap_action:
+              action: toggle
+          - entity: switch.bathroom_fan
+            tap_action:
+              action: toggle
+          - entity: switch.cd_player
+            tap_action:
+              action: toggle
+          - entity: switch.bedroom_tv
+            tap_action:
+              action: toggle
+      - type: entity-filter
+        state_filter:
+          - 'on'
+          - playing
+          - paused
+          - idle
+        card:
+          show_header_toggle: false
+          title: Now Playing
+          type: entities
+        show_empty: false
+        entities:
+          - entity: media_player.living_room_receiver
+          - entity: media_player.shield_tv
+          - entity: media_player.playstation_4
+          - entity: media_player.living_room_tv
+            icon: 'mdi:cast'
+          - entity: media_player.living_room_audio
+            icon: 'mdi:cast'
+          - entity: switch.cd_player
+          - entity: media_player.kitchen_display
+          - entity: media_player.bathroom_mini
+          - entity: media_player.bedroom_display
+          - entity: media_player.bedroom_tv
+          - entity: media_player.bedroom
+            name: Bedroom Cast Group
+          - entity: media_player.office_mini
+      - type: weather-forecast
+        entity: weather.openweathermap
+
+  - title: Lights
+    icon: 'mdi:lightbulb'
+    path: lights
+    cards:
+      - type: glance
+        columns: 4
+        entities:
+          - entity: group.all_lights
+            name: All Lights
+            tap_action:
+              action: toggle
+          - entity: light.living_room
+            name: Living Room
+            tap_action:
+              action: toggle
+          - entity: light.dining_room
+            name: Dining Room
+            tap_action:
+              action: toggle
+          - entity: light.kitchen
+            name: Kitchen
+            tap_action:
+              action: toggle
+          - entity: light.bathroom
+            name: Bathroom
+            tap_action:
+              action: toggle
+          - entity: light.bedroom
+            name: Bedroom
+            tap_action:
+              action: toggle
+          - entity: light.office
+            name: Office
+            tap_action:
+              action: toggle
+          - entity: light.hallway
+            name: Hallway
+            tap_action:
+              action: toggle
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: light.living_room_lamp_g
+          - entity: light.living_room_lamp_p
+          - entity: light.living_room_lamp_b
+          - entity: light.living_room_lamp_r
+          - entity: light.living_room_lamp_w
+          - type: divider
+          - entity: light.kitchen_light_n
+          - entity: light.kitchen_light_s
+          - type: divider
+          - entity: light.bathroom_light_a
+          - entity: light.bathroom_light_b
+          - entity: light.bathroom_light_c
+          - entity: light.bathroom_light_d
+          - type: divider
+          - entity: light.bedroom_lamp
+          - entity: light.mads_lamp
+          - type: divider
+          - entity: light.office_lamp
+
+  - title: Media
+    icon: 'mdi:play-pause'
+    path: media
+    cards:
+      - type: entities
+        entities:
+          - entity: media_player.living_room_receiver
+          - entity: media_player.shield_tv
+          - entity: media_player.playstation_4
+          - entity: media_player.living_room_tv
+            icon: 'mdi:cast'
+          - entity: media_player.living_room_audio
+            icon: 'mdi:cast'
+          - entity: switch.cd_player
+      - type: entities
+        entities:
+          - entity: media_player.kitchen_display
+      - type: entities
+        entities:
+          - entity: media_player.bathroom_mini
+      - type: entities
+        entities:
+          - entity: media_player.bedroom_display
+          - entity: media_player.bedroom_tv
+          - entity: media_player.bedroom
+            name: Bedroom Cast Group
+      - type: entities
+        entities:
+          - entity: media_player.office_mini
+      - type: entities
+        entities:
+          - entity: media_player.whole_house
+
+  - title: People
+    icon: 'mdi:account-multiple'
+    path: people
+    cards:
+      - type: custom:group-card
+        group: group.people
+        card:
+          type: entity-filter
+          state_filter:
+            - 'home'
+          show_empty: false
+          card:
+            type: glance
+            title: Who's Here?
+            show_state: false
+      - title: House Members
+        type: map
+        entities:
+          - entity: person.alex
+          - entity: person.mads
+      # Leaving out for now, no guests set up yet
+      #- type: 'custom:group-card'
+      #  group: group.guests
+      #  card:
+      #    title: Guests
+      #    type: entities
+      #    show_header_toggle: false
+
+  - title: Info
+    icon: 'mdi:information'
+    path: info
+    cards:
+      - type: glance
+        entities:
+          - entity: sun.sun
+          - entity: binary_sensor.front_door_sensor
+      - type: entities
+        title: Hue Switches
+        show_header_toggle: false
+        entities:
+          - entity: sensor.bathroom_switch
+          - entity: sensor.bedroom_switch
+          - entity: sensor.living_room_and_kitchen_switch
+          - entity: sensor.office_switch
+
+  - title: Network
+    icon: 'mdi:network'
+    path: net
+    cards:
+      - type: entities
+        title: Z-Wave
+        show_header_toggle: false
+        entities:
+          - entity: zwave.aeotec_zw090_z_stick_gen5_us
+          - entity: zwave.bathroom_fan
+          - entity: zwave.front_door_sensor
+      - type: 'custom:group-card'
+        group: group.all_devices
+        card:
+          type: entities
+          title: Devices
+          show_header_toggle: false
+      - type: history-graph
+        entities:
+          - sensor.tplink_archer_c9_dd_wrt_packets_sec_sent
+          - sensor.tplink_archer_c9_dd_wrt_packets_sent
+          - sensor.tplink_archer_c9_dd_wrt_kbyte_sec_sent
+          - sensor.tplink_archer_c9_dd_wrt_bytes_received
+          - sensor.tplink_archer_c9_dd_wrt_packets_received
+          - sensor.tplink_archer_c9_dd_wrt_packets_sec_received
+          - sensor.tplink_archer_c9_dd_wrt_kbyte_sec_received
+          - sensor.tplink_archer_c9_dd_wrt_bytes_sent
+        
+  - title: Settings
+    icon: 'mdi:settings'
+    path: settings
+    cards:
+      - type: 'custom:group-card'
+        group: group.all_automations
+        card:
+          title: Automations
+          type: entities
+      - type: 'custom:group-card'
+        group: group.all_scripts
+        card:
+          type: entities
+          title: Scripts
+          show_header_toggle: false
