@@ -7,7 +7,7 @@
   action:
   - service: google_assistant.request_sync
     data:
-      agent_user_id: 0c1ba4ded74d492a9624e710ed536eac
+      agent_user_id: e39e4023324640a1a5867893e80c3e8c
 
 - id: bathroom_switch_1_hold
   alias: Bathroom Switch "ON" Hold

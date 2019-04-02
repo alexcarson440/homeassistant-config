@@ -29,6 +29,7 @@ history: # Enables support for tracking state changes over time
 config: # Enables configuration UI
 conversation: # Allows you to issue voice commands from the frontend in enabled browsers
 system_health: # Displays information on the system and its components
+hassio: # Add the hassio tab
 
 updater: # Checks for available updates
   include_used_components: true
@@ -37,7 +38,8 @@ http:
   base_url: !secret base_url
   use_x_forwarded_for: true
   trusted_proxies:
-    - 127.0.0.1
+    - 10.0.0.2
+    - 10.0.0.3
 
 discovery: # Discover some devices automatically
 sun: # Track the sun
@@ -48,10 +50,10 @@ weather: # Weather prediction
 
 tts: # Text to speech
   - platform: google
-    base_url: http://10.0.0.3:8123
+    base_url: http://10.0.0.4:8123
 
 zwave:
-  usb_path: /dev/zwaveusbstick
+  usb_path: /dev/serial/by-id/usb-0658_0200-if00
   network_key: !secret zwave_network_key
 
 sensor:
