@@ -1,0 +1,11 @@
+### person.yaml
+- id: alex
+  name: Alex
+  user_id: e39e4023324640a1a5867893e80c3e8c
+  device_trackers:
+  - device_tracker.google_maps_110090112805006357181
+- id: mads
+  name: Mads
+  #user_id: 
+  device_trackers:
+  - device_tracker.google_maps_117930919333548580556

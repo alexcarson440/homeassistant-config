@@ -12,11 +12,13 @@ group: !include groups.yaml
 automation: !include automations.yaml
 script: !include scripts.yaml
 
+person: !include person.yaml
+zone: !include zone.yaml
+
 binary_sensor: !include binary_sensor.yaml
 device_tracker: !include device_tracker.yaml
 switch: !include switch.yaml
 media_player: !include media_player.yaml
-zone: !include zone.yaml
 
 google_assistant: !include google_assistant.yaml
 

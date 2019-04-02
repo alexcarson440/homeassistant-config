@@ -56,6 +56,12 @@ light.mads_lamp:
 light.office_lamp:
   icon: mdi:floor-lamp
 
+# people
+person.alex:
+  entity_picture: /local/images/alex
+person.mads:
+  entity_picture: /local/images/mads
+
 # google homes
 media_player.kitchen_display:
   icon: mdi:google-assistant
