@@ -5,13 +5,17 @@
 *.xml
 *.sqlite
 *.pyc
-*.cookies
+*.cookies*
 
 .cloud
 .storage
-.uuid
+.Trash*
 deps
+tts
+www
 
-secrets.yaml
-OZW_Log.txt
+.ps4-games.json
+.uuid
 known_devices.yaml
+OZW_Log.txt
+secrets.yaml
