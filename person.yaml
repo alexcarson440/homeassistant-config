@@ -6,6 +6,6 @@
   - device_tracker.google_maps_110090112805006357181
 - id: mads
   name: Mads
-  #user_id: 
+  user_id: 49e1466f675b49148ff6c686382bf3e3
   device_trackers:
   - device_tracker.google_maps_117930919333548580556
