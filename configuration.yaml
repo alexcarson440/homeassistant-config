@@ -65,6 +65,7 @@ notify:
     api_key: !secret pushbullet_api
 
 circadian_lighting:
+  min_colortemp: 2800
   max_colortemp: 10000
   sunrise_offset: '-00:30'
   sunset_offset: '00:30'
