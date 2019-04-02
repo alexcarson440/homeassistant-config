@@ -3,9 +3,6 @@
     lights_ct: !include entity_lists/lights/lights.yaml
     disable_brightness_adjust: true
 
-  - platform: tplink
-    host: 10.0.0.20 #CD Player
-
 # Change bathroom fan from a light to a switch
   - platform: template
     switches:
