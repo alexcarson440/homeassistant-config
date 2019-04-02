@@ -1,17 +1,22 @@
 ### media_player.yaml
-  - platform: onkyo
-    host: 10.0.0.12
-    name: Living Room Receiver
-    sources:
-      video6: 'Shield TV'
-      video3: 'PS4'
-      Bluray: 'PS3'
-      video4: 'AUX'
-      cd: 'CD'
-      fm: 'FM'
-      am: 'AM'
-      tv: 'TV'
+- platform: onkyo
+  host: 10.0.0.12
+  name: Living Room Receiver
+  sources:
+    video6: 'Shield TV'
+    video3: 'PS4'
+    Bluray: 'PS3'
+    video4: 'AUX'
+    cd: 'CD'
+    fm: 'FM'
+    am: 'AM'
+    tv: 'TV'
 #      video2: 'Cable'
 #      phono: 'Phono'
 #      usb: 'USB'
 #      network: 'Network'
+
+- platform: androidtv
+  name: Shield TV
+  host: 10.0.0.11
+  adb_server_ip: 127.0.0.1
