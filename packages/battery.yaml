@@ -1,0 +1,54 @@
+### packages/battery.yaml
+binary_sensor:
+- platform: template
+  sensors:
+    htc10_battery_charging:
+      device_class: plug
+      value_template: "{{ state_attr('device_tracker.google_maps_110090112805006357181', 'battery_charging')  }}"
+    clark_battery_charging:
+      device_class: plug
+      value_template: "{{ state_attr('device_tracker.google_maps_117930919333548580556', 'battery_charging')  }}"
+
+sensor:
+- platform: template
+  sensors:
+    htc10_battery:
+      friendly_name: "HTC10 Battery"
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('device_tracker.google_maps_110090112805006357181', 'battery_level')  }}"
+      icon_template: >
+        {%- set battery_level = state_attr('device_tracker.google_maps_110090112805006357181', 'battery_level') -%} 
+        {%- set battery_charging = state_attr('device_tracker.google_maps_110090112805006357181', 'battery_charging') -%}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+
+          mdi:battery
+        {%- if battery_level == 'unknown' -%}
+          -unknown
+        {%- elif battery_round < 100 or battery_charging -%}
+          {%- if battery_round > 0 -%}
+            {%- if battery_charging -%}-charging{%- endif -%}-{{ battery_round }}
+          {%- else -%}
+            {%- if battery_charging -%}-charging-outline{%- else -%}-alert{%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      device_class: Battery
+    clark_battery:
+      friendly_name: "Clark Battery"
+      unit_of_measurement: '%'
+      value_template: "{{ state_attr('device_tracker.google_maps_117930919333548580556', 'battery_level')  }}"
+      icon_template: >
+        {%- set battery_level = state_attr('device_tracker.google_maps_117930919333548580556', 'battery_level') -%} 
+        {%- set battery_charging = state_attr('device_tracker.google_maps_117930919333548580556', 'battery_charging') -%}
+        {% set battery_round = (battery_level|int / 10)|int * 10 %}
+
+          mdi:battery
+        {%- if battery_level == 'unknown' -%}
+          -unknown
+        {%- elif battery_round < 100 or battery_charging -%}
+          {%- if battery_round > 0 -%}
+            {%- if battery_charging -%}-charging{%- endif -%}-{{ battery_round }}
+          {%- else -%}
+            {%- if battery_charging -%}-charging-outline{%- else -%}-alert{%- endif -%}
+          {%- endif -%}
+        {%- endif -%}
+      device_class: Battery

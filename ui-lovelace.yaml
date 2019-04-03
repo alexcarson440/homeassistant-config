@@ -226,6 +226,8 @@ views:
         entities:
           - entity: sun.sun
           - entity: binary_sensor.front_door_sensor
+          - entity: sensor.htc10_battery
+          - entity: sensor.clark_battery
       - type: entities
         title: Hue Switches
         show_header_toggle: false
