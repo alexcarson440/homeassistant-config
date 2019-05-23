@@ -1,0 +1,4 @@
+### entity_lists/zwave.yaml
+- zwave.aeotec_zw090_z_stick_gen5_us
+- zwave.bathroom_fan
+- zwave.front_door_sensor

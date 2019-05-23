@@ -82,8 +82,8 @@
       entity_id: media_player.living_room_receiver
       source: 'CD'
 
-- id: notify_unavailable
-  alias: Notify Unavailable
+- id: notify_light_unavailable
+  alias: Notify Light Unavailable
   trigger:
   - entity_id: !include entity_lists/lights/lights.yaml
     for:
@@ -96,6 +96,21 @@
       title: "An entity is unavailable"
       message: >
         {{ trigger.to_state.attributes.friendly_name }} has been {{ trigger.to_state.state }} for more than {{ trigger.for }} (was {{ trigger.from_state.state }})
+      target: email/yinyang1994@gmail.com
+    service: notify.pushbullet
+
+- id: notify_zwave_unavailable
+  alias: Notify Z-Wave Unavailable
+  trigger:
+  - entity_id:  !include entity_lists/zwave.yaml
+    platform: state
+    to: 'dead'
+  condition: []
+  action:
+  - data_template:
+      title: "An entity is unavailable"
+      message: >
+        {{ trigger.to_state.attributes.friendly_name }} has been marked as {{ trigger.to_state.state }} (was {{ trigger.from_state.state }})
       target: email/yinyang1994@gmail.com
     service: notify.pushbullet
 
