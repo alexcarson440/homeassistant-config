@@ -92,9 +92,13 @@ media_player.bedroom_tv:
 media_player.kodi:
   icon: mdi:kodi
 
+# switches
 switch.cd_player:
   icon: mdi:disc-player
+switch.bedroom_tv:
+  icon: mdi:television
 
+# hidden
 light.bathroom_fan:
   hidden: true
 media_player.living_room_receiver_zone_2:
