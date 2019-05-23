@@ -1,0 +1,15 @@
+### googlehome.yaml
+googlehome:
+  devices:
+    - host: 10.0.0.30
+      track_alarms: true
+      track_devices: false
+    - host: 10.0.0.31
+      track_alarms: true
+      track_devices: false
+    - host: 10.0.0.32
+      track_alarms: true
+      track_devices: false
+    - host: 10.0.0.33
+      track_alarms: true
+      track_devices: false

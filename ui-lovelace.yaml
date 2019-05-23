@@ -1,8 +1,14 @@
 title: Home
 
 resources:
-  - type: js
-    url: /local/custom-lovelace/group-card/group-card.js
+  - url: /local/plugins/custom-lovelace/group-card/group-card.js
+    type: js
+  - url: /local/plugins/lovelace-card-tools/card-tools.js
+    type: js
+  - url: /local/plugins/lovelace-layout-card/layout-card.js
+    type: js
+  - url: /local/plugins/custom-lovelace/monster-card/monster-card.js
+    type: js
 
 views:
   - title: Home
@@ -95,6 +101,24 @@ views:
           - entity: media_player.bedroom
             name: Bedroom Cast Group
           - entity: media_player.office_mini
+      - type: custom:monster-card
+        show_empty: false
+        card:
+          type: entities
+          title: Current Alarm/Timers
+          show_header_toggle: false
+        filter:
+          include:
+          - entity_id: sensor.kitchen_display_timer
+          - entity_id: sensor.bathroom_mini_timer
+          - entity_id: sensor.bedroom_display_timer
+          - entity_id: sensor.office_mini_timer
+          - entity_id: sensor.kitchen_display_alarm
+          - entity_id: sensor.bathroom_mini_alarm
+          - entity_id: sensor.bedroom_display_alarm
+          - entity_id: sensor.office_mini_alarm
+          exclude:
+          - state: "unavailable"
       - type: weather-forecast
         entity: weather.openweathermap
 
@@ -224,13 +248,37 @@ views:
   - title: Info
     icon: 'mdi:information'
     path: info
+    panel: true
     cards:
+    - type: custom:layout-card
+      column_width: 500
+      # max_columns: 4
+      # max_width: 100%
+      cards:
       - type: glance
+        columns: 4
         entities:
           - entity: sun.sun
           - entity: binary_sensor.front_door_sensor
+          name: Front Door
           - entity: sensor.htc10_battery
           - entity: sensor.clark_battery
+      - type: entities
+        title: Timers
+        show_header_toggle: false
+        entities:
+        - entity: sensor.kitchen_display_timer
+        - entity: sensor.bathroom_mini_timer
+        - entity: sensor.bedroom_display_timer
+        - entity: sensor.office_mini_timer
+      - type: entities
+        title: Alarms
+        show_header_toggle: false
+        entities:
+        - entity: sensor.kitchen_display_alarm
+        - entity: sensor.bathroom_mini_alarm
+        - entity: sensor.bedroom_display_alarm
+        - entity: sensor.office_mini_alarm
       - type: entities
         title: Hue Switches
         show_header_toggle: false
