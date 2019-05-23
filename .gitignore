@@ -6,10 +6,13 @@
 *.sqlite
 *.pyc
 *.cookies*
+*.swp
 
 .cloud
 .storage
 .Trash*
+.vscode
+custom_components
 deps
 tts
 www
