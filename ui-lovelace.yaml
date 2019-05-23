@@ -9,6 +9,8 @@ resources:
     type: js
   - url: /local/plugins/custom-lovelace/monster-card/monster-card.js
     type: js
+  - url: /local/plugins/lovelace-fold-entity-row/fold-entity-row.js
+    type: js
 
 views:
   - title: Home
@@ -132,62 +134,64 @@ views:
     icon: 'mdi:lightbulb'
     path: lights
     cards:
-      - type: glance
-        columns: 4
-        entities:
-          - entity: group.all_lights
-            name: All Lights
-            tap_action:
-              action: toggle
-          - entity: light.living_room
-            name: Living Room
-            tap_action:
-              action: toggle
-          - entity: light.dining_room
-            name: Dining Room
-            tap_action:
-              action: toggle
-          - entity: light.kitchen
-            name: Kitchen
-            tap_action:
-              action: toggle
-          - entity: light.bathroom
-            name: Bathroom
-            tap_action:
-              action: toggle
-          - entity: light.bedroom
-            name: Bedroom
-            tap_action:
-              action: toggle
-          - entity: light.office
-            name: Office
-            tap_action:
-              action: toggle
-          - entity: light.hallway
-            name: Hallway
-            tap_action:
-              action: toggle
       - type: entities
         show_header_toggle: false
         entities:
-          - entity: light.living_room_lamp_g
-          - entity: light.living_room_lamp_p
-          - entity: light.living_room_lamp_b
-          - entity: light.living_room_lamp_r
-          - entity: light.living_room_lamp_w
-          - type: divider
+          - type: custom:fold-entity-row
+            head: light.living_room
+            items:
+            - entity: light.living_room_north_lamp
+            - entity: light.living_room_south_lamp
+          - type: custom:fold-entity-row
+            head: light.living_room_tv
+            items:
+            - entity: light.living_room_tv_left
+            - entity: light.living_room_tv_right
+      #- type: entities
+      #  show_header_toggle: false
+      #  entities:
+      #    - type: custom:fold-entity-row
+      #      head: light.dining_room
+      #      items:
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: custom:fold-entity-row
+            head: light.kitchen
+            items:
           - entity: light.kitchen_light_n
           - entity: light.kitchen_light_s
-          - type: divider
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: custom:fold-entity-row
+            head: light.bathroom
+            items:
           - entity: light.bathroom_light_a
           - entity: light.bathroom_light_b
           - entity: light.bathroom_light_c
           - entity: light.bathroom_light_d
-          - type: divider
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: custom:fold-entity-row
+            head: light.bedroom
+            items:
           - entity: light.bedroom_lamp
+            - entity: light.alex_s_lamp
           - entity: light.mads_lamp
-          - type: divider
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - type: custom:fold-entity-row
+            head: light.office
+            items:
           - entity: light.office_lamp
+            - entity: light.guest_bed_lamp
+      - type: entities
+        show_header_toggle: false
+        entities:
+          - entity: light.hallway_light
 
   - title: Media
     icon: 'mdi:play-pause'
