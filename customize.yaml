@@ -89,6 +89,8 @@ media_player.shield_tv:
   icon: mdi:android
 media_player.bedroom_tv:
   icon: mdi:television
+media_player.kodi:
+  icon: mdi:kodi
 
 switch.cd_player:
   icon: mdi:disc-player

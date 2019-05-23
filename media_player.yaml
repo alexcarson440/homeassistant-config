@@ -20,3 +20,6 @@
   name: Shield TV
   host: 10.0.0.11
   adb_server_ip: 127.0.0.1
+
+- platform: kodi
+  host: 10.0.0.11

@@ -72,14 +72,16 @@ views:
           - playing
           - paused
           - idle
+          - standby
         card:
-          show_header_toggle: false
-          title: Now Playing
           type: entities
+          title: Now Playing
+          show_header_toggle: false
         show_empty: false
         entities:
           - entity: media_player.living_room_receiver
           - entity: media_player.shield_tv
+          - entity: media_player.kodi
           - entity: media_player.playstation_4
           - entity: media_player.living_room_tv
             icon: 'mdi:cast'
@@ -165,6 +167,7 @@ views:
         entities:
           - entity: media_player.living_room_receiver
           - entity: media_player.shield_tv
+          - entity: media_player.kodi
           - entity: media_player.playstation_4
           - entity: media_player.living_room_tv
             icon: 'mdi:cast'
