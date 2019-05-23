@@ -2,11 +2,11 @@
 
 # light Groups
 light.living_room:
-  friendly_name: All Living Room Lights
+  friendly_name: Living Room Lamps
   icon: mdi:floor-lamp
 light.dining_room:
   hidden: true # no lights yet
-  friendly_name: All Kitchen Lights
+  friendly_name: All Dining Room Lights
   icon: mdi:ceiling-light
 light.kitchen:
   friendly_name: All Kitchen Lights
@@ -19,23 +19,19 @@ light.bedroom:
   icon: mdi:lamp
 light.office:
   friendly_name: All Office Lights
-  hidden: true # only one light
   icon: mdi:floor-lamp
 light.hallway:
   friendly_name: All hallway Lights
-  hidden: true # no lights yet # only one light
+  hidden: true # only one light
   icon: mdi:ceiling-light
+light.living_room_tv:
+  friendly_name: Living Room TV Lights
+  icon: mdi:television
 
 # single lights
-light.living_room_lamp_b:
+light.living_room_north_lamp:
   icon: mdi:floor-lamp
-light.living_room_lamp_g:
-  icon: mdi:floor-lamp
-light.living_room_lamp_p:
-  icon: mdi:floor-lamp
-light.living_room_lamp_r:
-  icon: mdi:floor-lamp
-light.living_room_lamp_w:
+light.living_room_south_lamp:
   icon: mdi:floor-lamp
 light.kitchen_light_n:
   icon: mdi:ceiling-light
@@ -51,10 +47,20 @@ light.bathroom_light_d:
   icon: mdi:ceiling-light
 light.bedroom_lamp:
   icon: mdi:floor-lamp
+light.alex_s_lamp:
+  icon: mdi:lamp
 light.mads_lamp:
   icon: mdi:lamp
 light.office_lamp:
   icon: mdi:floor-lamp
+light.guest_bed_lamp:
+  icon: mdi:lamp
+light.hallway_light:
+  icon: mdi:ceiling-light
+light.living_room_tv_left:
+  icon: mdi:led-strip
+light.living_room_tv_right:
+  icon: mdi:led-strip
 
 # people
 person.alex:

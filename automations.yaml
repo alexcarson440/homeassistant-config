@@ -156,4 +156,28 @@
       brightness: "{{ [128, state_attr('light.kitchen', 'brightness') | int] | max }}"
       kelvin: "{{ state_attr('sensor.circadian_values', 'colortemp') }}"
     
+- id: control_living_room_tv_lights
+  alias: Control Living Room TV Lights
+  trigger: 
+  - platform: state
+    entity_id: media_player.living_room_receiver
+  condition: []
+  action:
+  - service_template: >
+      {%- if trigger.to_state.state == 'off' and trigger.from_state.state != 'unavailable' -%}
+        light.turn_off
+      {%- else -%}
+        script.noop
+      {%- endif -%}
+    data:
+      entity_id: light.living_room_tv
+  - service_template: >
+      {%- if trigger.from_state.state == 'off' and trigger.to_state.state != 'unavailable' -%}
+        light.turn_on
+      {%- else -%}
+        script.noop
+      {%- endif -%}
+    data:
+      entity_id: light.living_room_tv
+      brightness: 80
       

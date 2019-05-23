@@ -1,9 +1,6 @@
 ### entity_lists/lights/lights.yaml
- - light.living_room_lamp_b
- - light.living_room_lamp_g
- - light.living_room_lamp_p
- - light.living_room_lamp_r
- - light.living_room_lamp_w
+ - light.living_room_north_lamp
+ - light.living_room_south_lamp
  - light.kitchen_light_n
  - light.kitchen_light_s
  - light.bathroom_light_a
@@ -11,5 +8,10 @@
  - light.bathroom_light_c
  - light.bathroom_light_d
  - light.bedroom_lamp
+ - light.alex_s_lamp
  - light.mads_lamp
  - light.office_lamp
+ - light.guest_bed_lamp
+ - light.hallway_light
+ - light.living_room_tv_left
+ - light.living_room_tv_right
