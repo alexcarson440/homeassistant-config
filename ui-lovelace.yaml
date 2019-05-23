@@ -11,6 +11,8 @@ resources:
     type: js
   - url: /local/plugins/lovelace-fold-entity-row/fold-entity-row.js
     type: js
+  - url: /local/github/custom-cards/tracker-card.js?track=true
+    type: module
 
 views:
   - title: Home
@@ -354,3 +356,4 @@ views:
           type: entities
           title: Scripts
           show_header_toggle: false
+      - type: custom:tracker-card

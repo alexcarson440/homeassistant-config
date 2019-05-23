@@ -62,6 +62,12 @@ zwave:
   usb_path: /dev/serial/by-id/usb-0658_0200-if00
   network_key: !secret zwave_network_key
 
+custom_updater:
+  show_installable: true
+  component_urls:
+  - https://raw.githubusercontent.com/robmarkcole/Hue-sensors-HASS/master/custom_updater.json
+  - https://raw.githubusercontent.com/claytonjn/hass-circadian_lighting/master/custom_updater.json
+
 sensor:
   - platform: huesensor
 
