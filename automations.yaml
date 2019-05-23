@@ -126,13 +126,19 @@
     conditions:
     - condition: sun
       after: sunset
-      after_offset: "00:30:00"
     - condition: sun
       before: sunrise
-      before_offset: "-00:30:00"
   - service: light.turn_on
     data_template:
-      entity_id: light.living_room
-      brightness: "{{ [85, state_attr('light.living_room', 'brightness') | int] | max }}"
+      entity_id: 
+      - light.living_room
+      brightness: "{{ [128, state_attr('light.living_room', 'brightness') | int] | max }}"
+      kelvin: "{{ state_attr('sensor.circadian_values', 'colortemp') }}"
+  - service: light.turn_on
+    data_template:
+      entity_id: 
+      - light.kitchen
+      brightness: "{{ [128, state_attr('light.kitchen', 'brightness') | int] | max }}"
+      kelvin: "{{ state_attr('sensor.circadian_values', 'colortemp') }}"
     
       
