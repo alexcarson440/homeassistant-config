@@ -16,6 +16,7 @@ custom_components
 deps
 tts
 www
+gtfs
 
 .ps4-games.json
 .uuid

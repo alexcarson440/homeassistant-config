@@ -1,0 +1,16 @@
+### gtfs.yaml
+sensor:
+  - platform: gtfs
+    origin: 70034
+    destination: 70014
+    data: mbta.zip
+    name: Malden Center - Inbound - Departure
+    offset: '00:05:00'
+    include_tomorrow: true
+
+  - platform: gtfs
+    origin: 70035
+    destination: 70036
+    data: mbta.zip
+    name: Malden Center - Outbound - Arrival
+    include_tomorrow: true

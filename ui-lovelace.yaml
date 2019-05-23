@@ -264,6 +264,14 @@ views:
           - entity: sensor.htc10_battery
           - entity: sensor.clark_battery
       - type: entities
+        title: Malden Center
+        show_header_toggle: false
+        entities:
+        - entity: sensor.malden_center_inbound_departure
+          name: Next Inbound Depature
+        - entity: sensor.malden_center_outbound_arrival
+          name: Next Outbound Arrival
+      - type: entities
         title: Timers
         show_header_toggle: false
         entities:
