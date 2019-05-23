@@ -1,5 +1,5 @@
 ### binary_sensor.yaml
-- platform: hue_custom
+- platform: huesensor
 
 - platform: template
   sensors:

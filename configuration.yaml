@@ -63,7 +63,7 @@ zwave:
   network_key: !secret zwave_network_key
 
 sensor:
-  - platform: hue_custom
+  - platform: huesensor
 
 notify:
   - platform: pushbullet
