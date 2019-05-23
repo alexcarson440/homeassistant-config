@@ -55,7 +55,7 @@ weather: # Weather prediction
     api_key: !secret openweather_api
 
 tts: # Text to speech
-  - platform: google
+  - platform: google_translate
     base_url: http://10.0.0.4:8123
 
 zwave:
